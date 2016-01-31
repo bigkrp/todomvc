@@ -58,13 +58,13 @@
 	 * });
 	 */
 	Template.prototype.show = function (data) {
-		var i, l;
+		var i, l, template, completed, checked;
 		var view = '';
 
 		for (i = 0, l = data.length; i < l; i++) {
-			var template = this.defaultTemplate;
-			var completed = '';
-			var checked = '';
+			template = this.defaultTemplate;
+			completed = '';
+			checked = '';
 
 			if (data[i].completed) {
 				completed = 'completed';
